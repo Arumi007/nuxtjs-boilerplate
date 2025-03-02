@@ -13,5 +13,25 @@
     "nuxt": "^3.8.2",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.9.0",
+    "nuxtjs-boilerplate.git": "link:../../../../../home/bank/.local/share/pnpm/global/5/node_modules/https:/github.com/Arumi007/nuxtjs-boilerplate.git",
+    "vercel": "^41.3.0"
+  },
+  "name": "nuxtjs-boilerplate",
+  "version": "1.0.0",
+  "description": "Deploy your [Nuxt](https://nuxt.com) project to Vercel with zero configuration.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "esbuild",
+      "sharp"
+    ],
+    "overrides": {}
   }
 }
