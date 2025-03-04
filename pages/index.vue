@@ -97,4 +97,31 @@ body {
   color: #8B4513; /* ปรับสีตัวอักษร */
   text-shadow: 1px 1px 2px rgb(0, 0, 0); /* ปรับ text-shadow */
 }
+
+/* หน้าจอขนาดเล็ก (โทรศัพท์มือถือ) */
+@media (max-width: 767px) {
+  .welcome-text {
+    font-size: 3rem; /* ปรับขนาดตัวอักษร */
+  }
+  .text-container {
+    width: 90%; /* ปรับขนาดกล่องข้อความ */
+    padding: 20px; /* ปรับ padding */
+  }
+  .text {
+    font-size: 2rem; /* ปรับขนาดตัวอักษร */
+  }
+}
+
+/* หน้าจอขนาดกลาง (แท็บเล็ต) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .welcome-text {
+    font-size: 4rem; /* ปรับขนาดตัวอักษร */
+  }
+  .text-container {
+    width: 60%; /* ปรับขนาดกล่องข้อความ */
+  }
+  .text {
+    font-size: 2.5rem; /* ปรับขนาดตัวอักษร */
+  }
+}
 </style>
