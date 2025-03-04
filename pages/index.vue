@@ -25,7 +25,7 @@ onMounted(() => {
 <style scoped>
 body {
   font-family: 'Prompt', sans-serif;
-  background-color:rgb(175, 115, 115);
+  background-color: rgb(175, 115, 115);
 }
 
 .container {
@@ -35,10 +35,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('/main.png'); /* เพิ่มบรรทัดนี้ */
-  background-size: cover; /* เพิ่มบรรทัดนี้ */
-  background-position: center; /* เพิ่มบรรทัดนี้ */
-  background-repeat: no-repeat; /* เพิ่มบรรทัดนี้ */
+  background-image: url('/main.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .image {
@@ -59,7 +59,7 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   -webkit-text-stroke: 2px yellow;
   text-stroke: 2px yellow;
-  animation: moveText 2s infinite alternate; /* เพิ่ม animation */
+  animation: moveText 2s infinite alternate;
 }
 
 @keyframes moveText {
@@ -76,52 +76,63 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40%; /* กำหนดความกว้าง */
-  height: 20%; /* กำหนดความสูง */
+  width: 40%;
+  height: 20%;
   padding: 30px;
   background-color: rgba(255, 187, 0, 0.22);
   border: 2px solid #FFFF00;
-  border-radius: 50%; /* กำหนด border-radius เป็น 50% */
+  border-radius: 50%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .text-container:hover {
-  box-shadow: 0 12px 24px rgba(255, 77, 77, 0); /* ปรับ box-shadow เมื่อ hover */
-  transform: translate(-50%, -50%) scale(1.1); /* เพิ่มเอฟเฟกต์ scale เมื่อ hover */
+  box-shadow: 0 12px 24px rgba(255, 77, 77, 0);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .text {
-  font-size: 3rem; /* ปรับขนาดตัวอักษร */
-  color: #8B4513; /* ปรับสีตัวอักษร */
-  text-shadow: 1px 1px 2px rgb(0, 0, 0); /* ปรับ text-shadow */
+  font-size: 3rem;
+  color: #8B4513;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 /* หน้าจอขนาดเล็ก (โทรศัพท์มือถือ) */
 @media (max-width: 767px) {
   .welcome-text {
-    font-size: 3rem; /* ปรับขนาดตัวอักษร */
+    font-size: 2rem; /* ปรับขนาดตัวอักษร */
+    top: 2%; /* ปรับตำแหน่ง */
   }
   .text-container {
     width: 90%; /* ปรับขนาดกล่องข้อความ */
+    height: auto; /* ปรับความสูงอัตโนมัติ */
     padding: 20px; /* ปรับ padding */
+    top: 60%; /* ปรับตำแหน่ง */
   }
   .text {
     font-size: 2rem; /* ปรับขนาดตัวอักษร */
+  }
+  .image {
+    max-width: 100%; /* ปรับขนาดรูปภาพ */
+    max-height: 200%; /* ปรับขนาดรูปภาพ */
   }
 }
 
 /* หน้าจอขนาดกลาง (แท็บเล็ต) */
 @media (min-width: 768px) and (max-width: 991px) {
   .welcome-text {
-    font-size: 4rem; /* ปรับขนาดตัวอักษร */
+    font-size: 3rem;
   }
   .text-container {
-    width: 60%; /* ปรับขนาดกล่องข้อความ */
+    width: 60%;
   }
   .text {
-    font-size: 2.5rem; /* ปรับขนาดตัวอักษร */
+    font-size: 2.5rem;
+  }
+  .image {
+    max-width: 150%; /* ปรับขนาดรูปภาพ */
+    max-height: 250%; /* ปรับขนาดรูปภาพ */
   }
 }
 </style>
