@@ -19,11 +19,17 @@
         เป็นอุปัชฌาย์ หลวงปู่นนท์ โกวิโท เป็นพระกรรมวาจาจารย์ หลวงปู่หอม เป็นพระอนุสาวนาจารย์
       </p>
       <div class="dharma-list">
-        <span class="dharma-title" @click="toggleList">ธรรมเทศนา หลวงปู่ประสาร ปัญญาพโล</span>
+        <span class="dharma-title" @click="toggleList">1. ธรรมเทศนา หลวงปู่ประสาร ปัญญาพโล</span>
         <ul ref="dharmaList" class="dharma-sublist">
         <li v-for="(item, index) in dharmaItems" :key="index" class="dharma-item" @click="goToSoundCloud(item.soundcloudUrl)">{{ item.title }}</li>         
         </ul>
       </div>
+
+      <div class="dharma-list">
+        <span class="dharma-title" @click="goToDrive('https://drive.google.com/drive/folders/12c6UgSUDBHBqsnK4zsquhthVuMPCXfE8?usp=drive_link')">ดาวน์โหลดรวมพระธรรมเทศนา </span>
+      </div>
+
+
     </div>
   </div>
   <audio ref="audioPlayer" controls style="display: none;"></audio>
@@ -55,8 +61,13 @@ const toggleList = () => {
   isListVisible.value = !isListVisible.value;
   dharmaList.value.style.display = isListVisible.value ? 'block' : 'none';
 };
+
 const goToSoundCloud = (soundcloudUrl) => {
   window.open(soundcloudUrl, '_blank');
+};
+
+const goToDrive = (driveUrl) => {
+  window.open(driveUrl, '_blank');
 };
 
 </script>
@@ -76,7 +87,7 @@ const goToSoundCloud = (soundcloudUrl) => {
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Prompt', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   color: yellow;
 }
@@ -94,8 +105,8 @@ const goToSoundCloud = (soundcloudUrl) => {
 }
 
 .image {
-  width: 25%;
-  height: 10%;
+  max-width: 150%;
+  max-height: 150%;
   display: block;
   margin: 0 auto;
 }
@@ -121,21 +132,20 @@ const goToSoundCloud = (soundcloudUrl) => {
   text-align: left;
   width: 80%;
   margin: 0px auto;
-  display: flex; /* เพิ่มบรรทัดนี้ */
-  align-items: flex-start; /* เพิ่มบรรทัดนี้ */
+  
 }
 
 .dharma-title {
   font-size: 2rem;
   color: red;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
+  display: block;
 }
 
 
-/* เพิ่มบรรทัดนี้ */
 .dharma-list:nth-child(2) {
-  margin-top: 40px; /* ปรับค่า margin-top ตามต้องการ */
+  margin-top: 40px; 
 }
 
 .dharma-sublist {
@@ -143,10 +153,12 @@ const goToSoundCloud = (soundcloudUrl) => {
   padding: 10px;
   margin-top: 5px;
   display: none;
-  border: 1px solid #ccc; /* เพิ่มเส้นขอบ */
-  border-radius: 5px; /* เพิ่มขอบมน */
-  max-height: 200px; /* กำหนดความสูงสูงสุด */
-  overflow-y: auto; /* เปิดใช้งานการเลื่อน */
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  max-height: 200px; 
+  overflow-y: auto;
+  background-color:rgb(252, 252, 252); /* สีพื้นหลัง LightSteelBlue */
+  color: #333; /* สีตัวอักษรสีเทาเข้ม */ 
 }
 
 .dharma-item {

@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h1 class="welcome-text">พระธรรมโกศาจารย์ (เงื่อม อินฺทปญฺโญ)</h1>
     <div class="empty-box">
       <img src="/pu_puttas.jpg" class="image" />
       <h2 class="birth-title">ประวัติ</h2>
@@ -25,6 +24,17 @@
             </ul>
           </li>
         </ul>
+      </div>
+
+      <div class="dharma-list">
+        <span class="dharma-title" @click="toggleList4">รวมวิดีโอ</span>
+        <ul v-if="isList4Visible" ref="dharmaList4" class="dharma-sublist">
+          <li v-for="(item, index) in dharmaItems4" :key="index" class="dharma-item" @click="goToYouTube(item.youtubeUrl)">{{ item.title }}</li>
+        </ul>
+      </div>
+
+      <div class="dharma-list">
+        <span class="dharma-title" @click="goToDrive('https://drive.google.com/drive/folders/1xyYrymZcnPKqAtcxSjyvggF2YEtqVj7A?usp=drive_link')">ดาวน์โหลดรวมพระธรรมเทศนา </span>
       </div>
 
     </div>
@@ -4819,13 +4829,30 @@ const dharmas = ref([
       ],
     },
 
-    
-
   // ย้อนไป หัวห้อ 6
     
   ],
 },
 
+]);
+
+const dharmaList4 = ref(null);
+let isList4Visible = ref(false);
+
+const dharmaItems4 = ref([
+  { title: '1. หนึ่งวันในชีวิตของพระสงฆ์เซน', youtubeUrl: 'https://www.youtube.com/watch?v=XsNbcpqN1b0' },
+  { title: '2. จิตใจแบบเซน บทนำ', youtubeUrl: 'https://www.youtube.com/watch?v=9wInmLiMoNw&t=1s' },
+  { title: '3. จิตใจแบบเซน', youtubeUrl: 'https://www.youtube.com/watch?v=BOf1wfxcxTg' },
+  { title: '4. Life & Work', youtubeUrl: 'https://www.youtube.com/watch?v=GxnRWUWWV8M' },
+  { title: '5. ชาตกาล ๑๐๐ปี พุทธทาส', youtubeUrl: 'https://www.youtube.com/watch?v=CBH-ksewtN4&t=4s' },
+  { title: '6. ชีวิตและงาน', youtubeUrl: 'https://www.youtube.com/watch?v=X7cp-evuoRo&t=3s' },
+  { title: '7. บทสุดท้าย', youtubeUrl: 'https://www.youtube.com/watch?v=O24otT_TWdc&t=1s' },
+  { title: '8. รายการมหัศจรรย์สุวรรณภูมิ ตอน พุทธทาสมรดกแห่งธรรม', youtubeUrl: 'https://www.youtube.com/watch?v=8Bjdj4nUXNY' },
+  { title: '9. สืบสานปณิธานพุทธทาส ๑๐๐ปีชาตกาล', youtubeUrl: 'https://www.youtube.com/watch?v=NABjhd_RK8k&t=4s' },
+  { title: '10. สวนโมกขพลาราม1', youtubeUrl: 'https://www.youtube.com/watch?v=V675RZpAJ6M' },
+  { title: '11. ตามรอยพุทธทาส', youtubeUrl: 'https://www.youtube.com/watch?v=Ca8jNmfZKx4' },
+  { title: '12. สวนโมกขพลาราม', youtubeUrl: 'https://www.youtube.com/watch?v=xPPyZ3iQFh8' },
+  // เพิ่มวิดีโอ YouTube อื่น ๆ ได้ที่นี่
 ]);
 
 const toggleSubList = (index) => {
@@ -4837,11 +4864,25 @@ const toggleSubSubList = (dharmaIndex, subIndex) => {
     !dharmas.value[dharmaIndex].subList[subIndex].showSubSubList;
 };
 
+const toggleList4 = () => {
+  isList4Visible.value = !isList4Visible.value;
+};
+
 const goToSoundCloud = (soundcloudUrl) => {
   if (soundcloudUrl) {
     window.open(soundcloudUrl, '_blank');
   }
 };
+
+const goToYouTube = (youtubeUrl) => {
+  window.open(youtubeUrl, '_blank');
+};
+
+const goToDrive = (driveUrl) => {
+  window.open(driveUrl, '_blank');
+};
+
+
 </script>
 
 <style scoped>
@@ -4917,23 +4958,30 @@ const goToSoundCloud = (soundcloudUrl) => {
 
 .dharma-sublist {
   list-style: none;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  max-height: 200px;
+  padding: 15px; /* เพิ่ม padding */
+  margin-top: 10px; /* เพิ่ม margin */
+  border: 2px solid #ddd; /* เพิ่ม border */
+  border-radius: 8px; /* เพิ่ม border-radius */
+  box-shadow: 0 4px 8px rgb(255, 0, 0); /* เพิ่ม box-shadow */
+  max-height: 250px; /* เพิ่ม max-height */
   overflow-y: auto;
   margin-left: 20px;
+  transition: all 0.3s ease; /* เพิ่ม transition */
 }
 
 .dharma-sub-sublist {
   list-style: none;
   padding: 10px;
   margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #eee; /* เปลี่ยน border */
+  border-radius: 5px; /* เพิ่ม border-radius */
   max-height: 200px;
   overflow-y: auto;
   margin-left: 20px;
 }
+
+.dharma-sublist:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* เพิ่ม box-shadow เมื่อ hover */
+}
+
 </style>

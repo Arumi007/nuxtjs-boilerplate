@@ -11,25 +11,40 @@
         และนางทา ประเสริฐพงศ์ มีพี่น้องร่วมกันทั้งหมด 19 คน ท่านบุตรคนที่ 6
       </p>
       <div class="dharma-list">
-        <span class="dharma-title dharma-title-1" @click="toggleList">ธรรมเทศนา</span>
-        <ul ref="dharmaList" class="dharma-sublist">
-        <li v-for="(item, index) in dharmaItems" :key="index" class="dharma-item" @click="goToSoundCloud(item.soundcloudUrl)">{{ item.title }}</li>
-          
-        </ul>
-       
-        <div class="dharma-list">
-      <span class="dharma-title" @click="toggleLastDharmaList">ธรรมเทศนา ๘๐ กัณฑ์สุดท้าย</span>
-      <ul ref="lastDharmaList" class="dharma-sublist">
-      <li v-for="(item, index) in lastDharmaItems" :key="index" class="dharma-item" @click="goToSoundCloud(item.soundcloudUrl)">{{ item.title }}</li>
-        
-      </ul>
-    </div>
+        <div class="dharma-list-item">
+          <span class="dharma-title dharma-title" @click="toggleList">1. ธรรมเทศนา</span>
+          <ul ref="dharmaList" class="dharma-sublist">
+            <li
+              v-for="(item, index) in dharmaItems"
+              :key="index"
+              class="dharma-item"
+              @click="goToSoundCloud(item.soundcloudUrl)"
+            >
+              {{ item.title }}
+            </li>
+          </ul>
+        </div>
+        <div class="dharma-list-item">
+          <span class="dharma-title" @click="toggleLastDharmaList">2. ธรรมเทศนา ๘๐ กัณฑ์สุดท้าย</span>
+          <ul ref="lastDharmaList" class="dharma-sublist">
+            <li
+              v-for="(item, index) in lastDharmaItems"
+              :key="index"
+              class="dharma-item"
+              @click="goToSoundCloud(item.soundcloudUrl)"
+            >
+              {{ item.title }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="drive-download">
+        <span class="dharma-title" @click="goToDrive('https://drive.google.com/drive/folders/1rghqlC0J3sJpyjojp6403y8PajnSZVOw?usp=drive_link')">ดาวน์โหลดรวมพระธรรมเทศนา Drive</span>
       </div>
     </div>
   </div>
   <audio ref="audioPlayer" controls style="display: none;"></audio>
 </template>
-
 <script setup>
 
 import { ref } from 'vue';
@@ -142,8 +157,13 @@ const toggleList = () => {
   isListVisible.value = !isListVisible.value;
   dharmaList.value.style.display = isListVisible.value ? 'block' : 'none';
 };
+
 const goToSoundCloud = (soundcloudUrl) => {
   window.open(soundcloudUrl, '_blank');
+};
+
+const goToDrive = (driveUrl) => {
+  window.open(driveUrl, '_blank');
 };
 
 const lastDharmaList = ref(null);
@@ -212,11 +232,12 @@ const toggleLastDharmaList = () => {
 
 .dharma-list {
   margin-top: 20px;
-  text-align: left;
   width: 80%;
-  margin: 0px auto;
-  display: flex; /* เพิ่มบรรทัดนี้ */
-  align-items: flex-start; /* เพิ่มบรรทัดนี้ */
+  margin: 0 auto;
+}
+
+.dharma-list-item {
+  text-align: left;
 }
 
 .dharma-title {
@@ -224,17 +245,7 @@ const toggleLastDharmaList = () => {
   color: red;
   margin-bottom: 10px;
   cursor: pointer;
-}
-.dharma-title-1 {
-  font-size: 2rem;
-  color: red;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-/* เพิ่มบรรทัดนี้ */
-.dharma-list:nth-child(2) {
-  margin-top: 40px; /* ปรับค่า margin-top ตามต้องการ */
+  display: block;
 }
 
 .dharma-sublist {
@@ -242,10 +253,12 @@ const toggleLastDharmaList = () => {
   padding: 10px;
   margin-top: 5px;
   display: none;
-  border: 1px solid #ccc; /* เพิ่มเส้นขอบ */
-  border-radius: 5px; /* เพิ่มขอบมน */
-  max-height: 200px; /* กำหนดความสูงสูงสุด */
-  overflow-y: auto; /* เปิดใช้งานการเลื่อน */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: rgb(168, 197, 195);
+  color: #333;
 }
 
 .dharma-item {
@@ -254,4 +267,9 @@ const toggleLastDharmaList = () => {
   margin-bottom: 5px;
 }
 
+.drive-download {
+  text-align: left;
+  width: 80%;
+  margin: 20px auto;
+}
 </style>
