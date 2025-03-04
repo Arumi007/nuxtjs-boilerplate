@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="drive-download">
-        <span class="dharma-title" @click="goToDrive('https://drive.google.com/drive/folders/1rghqlC0J3sJpyjojp6403y8PajnSZVOw?usp=drive_link')">ดาวน์โหลดรวมพระธรรมเทศนา Drive</span>
+        <span class="dharma-title" @click="goToDrive('https://drive.google.com/drive/folders/1rghqlC0J3sJpyjojp6403y8PajnSZVOw?usp=drive_link')">ดาวน์โหลดรวมพระธรรมเทศนา </span>
       </div>
     </div>
   </div>
