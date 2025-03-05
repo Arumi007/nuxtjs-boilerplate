@@ -1,11 +1,22 @@
 <template>
   <div class="container">
     <h1 class="welcome-text">เส้นทางแห่งธรรม</h1>
-    <img src="/main.png" alt="Lotus Image" class="image" />
-    <nuxt-link to="/next-page">
-    <div class="text-container">
-      <h1 class="text">ก้าวสู่เส้นทางแห่งธรรม</h1>
+    <div class="about-support-container">
+      <div class="about-box">
+        <nuxt-link to="/about">
+          <h2>เกี่ยวกับเรา</h2>
+        </nuxt-link>
+      </div>
+      <div class="support-box">
+        <nuxt-link to="/support">
+          <h2>สนับสนุน</h2>
+        </nuxt-link>
+      </div>
     </div>
+    <nuxt-link to="/next-page">
+      <div class="text-container">
+        <h1 class="text">ก้าวสู่เส้นทางแห่งธรรม</h1>
+      </div>
     </nuxt-link>
   </div>
 </template>
@@ -39,13 +50,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.image {
-  max-width: 200%;
-  max-height: 300%;
-  height: auto;
-  object-fit: cover;
 }
 
 .welcome-text {
@@ -98,41 +102,98 @@ body {
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
-/* หน้าจอขนาดเล็ก (โทรศัพท์มือถือ) */
-@media (max-width: 767px) {
+.about-support-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 500px;
+}
+
+.about-box,
+.support-box {
+  width: 30%;
+  height: 25%;
+  padding: 30px;
+  background-color: rgba(255, 187, 0, 0.22);
+  border: 2px solid #FFFF00;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease; /* เพิ่ม transition */
+  margin: 10px;
+}
+
+.about-box:hover,
+.support-box:hover {
+  box-shadow: 0 12px 24px rgba(255, 77, 77, 0);
+  transform: scale(1.1); /* เพิ่ม transform */
+}
+
+.about-box a,
+.support-box a,
+.about-box nuxt-link,
+.support-box nuxt-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* หน้าจอขนาดเล็ก (390x844 px) */
+@media (max-width: 400px) {
   .welcome-text {
-    font-size: 2rem; /* ปรับขนาดตัวอักษร */
-    top: 2%; /* ปรับตำแหน่ง */
+    font-size: 3rem;
+    top: 6%;
   }
   .text-container {
-    width: 90%; /* ปรับขนาดกล่องข้อความ */
-    height: auto; /* ปรับความสูงอัตโนมัติ */
-    padding: 20px; /* ปรับ padding */
-    top: 60%; /* ปรับตำแหน่ง */
+    width: 80%;
+    height: auto;
+    padding: 15px;
+    top: 45%;
   }
   .text {
-    font-size: 2rem; /* ปรับขนาดตัวอักษร */
+    font-size: 1.5rem;
   }
-  .image {
-    max-width: 100%; /* ปรับขนาดรูปภาพ */
-    max-height: 200%; /* ปรับขนาดรูปภาพ */
+  .about-support-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-box,
+  .support-box {
+    width: 80%;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
   }
 }
 
-/* หน้าจอขนาดกลาง (แท็บเล็ต) */
-@media (min-width: 768px) and (max-width: 991px) {
+/* หน้าจอขนาดกลาง (แท็บเล็ต 768x1024 px) */
+@media (min-width: 768px) and (max-width: 1024px) {
   .welcome-text {
-    font-size: 3rem;
+    font-size: 4rem;
+    top: 5%;
   }
   .text-container {
-    width: 60%;
+    width: 70%;
+    height: auto;
+    padding: 25px;
+    top: 40%;
   }
   .text {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
-  .image {
-    max-width: 150%; /* ปรับขนาดรูปภาพ */
-    max-height: 250%; /* ปรับขนาดรูปภาพ */
+  .about-box,
+  .support-box {
+    width: 45%;
+    height: auto;
+    padding: 20px;
+    border-radius: 12px;
   }
+}
+
+/* หน้าจอขนาดใหญ่พิเศษ (เดสก์ท็อปขนาดใหญ่กว่า 1440x900 px) */
+@media (min-width: 1441px) {
 }
 </style>

@@ -49,6 +49,25 @@
         <nuxt-link to="/luangpu-fes3"><li>43. พระธรรมเทศนา พระอริยะ</li></nuxt-link>
       </ul>
     </div>
+
+    <div class="page-box box">
+      <nuxt-link to="/">
+        <h2>หน้าเว็บ</h2>
+      </nuxt-link>
+    </div>
+
+    <div class="about-box box">
+      <nuxt-link to="/about">
+        <h2>เกี่ยวกับเรา</h2>
+      </nuxt-link>
+    </div>
+
+    <div class="support-box box">
+      <nuxt-link to="/support">
+        <h2>สนับสนุน</h2>
+      </nuxt-link>
+    </div>
+
   </div>
 </template>
 
@@ -59,6 +78,7 @@
   background-image: url('/lotus2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   min-height: 180vh;
   position: relative;
 }
@@ -69,49 +89,221 @@
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Prompt', sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
   color: yellow;
+  white-space: nowrap; /* เพิ่ม white-space: nowrap; */
+  width: 90vw; /* ปรับ width */
 }
 
 .info-box {
-  position: absolute;
+  position: relative;
   top: 10%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 85%;
-  height: 1350px;
+  transform: translate(-50%, 250px); /* ปรับค่า y */
+  width: 80%; /* ลด width */
+  max-height: 1200px; /* ลด max-height */
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.6);
   border: 1px solid #ccc;
   text-align: left;
+  overflow-y: auto;
 }
 
 .list-title {
-  position: absolute;
-  top: 10px;
-  left: 100px;
   font-family: 'Prompt', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   color: #333;
   text-align: left;
+  margin-bottom: 20px;
 }
 
 .list {
-  position: absolute; /* เพิ่ม position: absolute; */
-  top: 100px; /* ปรับตำแหน่งรายการรายชื่อ */
-  left: 100px; /* ปรับตำแหน่งรายการรายชื่อ */
+  position: static;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .list li {
-  display: block; /* ให้รายการรายชื่อแสดงผลในแนวตั้ง */
+  display: block;
   font-family: sans-serif;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #555;
-  padding: 0; /* ลบ padding ของรายการรายชื่อ */
-  margin: 0; /* ลบ margin ของรายการรายชื่อ */
+  padding: 5px 0;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.box {
+  width: 600px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute; /* เพิ่ม position: absolute; */
+  top: 400px; /* ปรับ top (คำนวณจากความสูง .welcome-text และระยะห่าง) */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.box a {
+  text-decoration: none;
+  color: #333;
+}
+
+.box h2 {
+  font-size: 1.2rem;
+}
+
+.page-box,
+.about-box,
+.support-box {
+  position: absolute;
+  top: 150px; /* ปรับ top (คำนวณจากความสูง .welcome-text และระยะห่าง) */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-box {
+  left: 20%; /* ปรับ left */
+  transform: translateX(-50%);
+}
+
+.about-box {
+  left: 50%; /* ปรับ left */
+  transform: translateX(-50%);
+}
+
+.support-box {
+  left: 80%; /* ปรับ left */
+  transform: translateX(-50%);
+}
+
+.box {
+  width: 250px; /* ปรับ width */
+  height: 60px; /* ปรับ height */
+  margin: 10px;
+}
+
+.box h2 {
+  font-size: 1.5rem; /* ปรับขนาดตัวอักษร */
+}
+
+
+
+/* หน้าจอขนาดเล็ก (390x844 px) */
+  @media (max-width: 767px) { /* เปลี่ยน max-width เป็น 767px */
+    .welcome-text {
+      font-size: 2rem;
+      width: 90vw;
+    }
+
+    .info-box {
+      transform: translate(-50%, 200px);
+    }
+
+    .list-title {
+      font-size: 2rem;
+    }
+
+    .list li {
+      font-size: 1.5rem;
+    }
+
+    .page-box {
+    top: 100px;
+    left: 55px;
+  }
+
+  .about-box {
+    top: 100px;
+    left: 180px;
+  }
+
+  .support-box {
+    top: 100px;
+    left: 310px;
+  }
+
+  .box { /* ปรับขนาดกล่องข้อความใน Media Query */
+    width: 110px; /* ลด width */
+    height: 50px; /* ลด height */
+    margin: 3px; /* ลด margin */
+  }
+
+  .box h2 { /* ปรับขนาดตัวอักษรใน Media Query */
+    font-size: 1rem; /* ลดขนาดตัวอักษร */
+  }
+    
+  }
+
+/* หน้าจอขนาดกลาง (แท็บเล็ต 768x1024 px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .welcome-text {
+    font-size: 3rem;
+    width: 95vw;
+  }
+
+  .info-box {
+    transform: translate(-50%, 200px);
+    width: 85%;
+    max-height: 1000px;
+  }
+
+  .list-title {
+    font-size: 2.2rem;
+  }
+
+  .list li {
+    font-size: 1.8rem;
+  }
+
+  .page-box,
+  .about-box,
+  .support-box {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .page-box {
+    left: 20%; /* ปรับ left */
+    transform: translateX(-50%); /* ปรับ translateX */
+  }
+
+  .about-box {
+    left: 50%; /* ปรับ left */
+    transform: translateX(-50%); /* ปรับ translateX */
+  }
+
+  .support-box {
+    left: 80%; /* ปรับ left */
+    transform: translateX(-50%); /* ปรับ translateX */
+  }
+
+  .box {
+    width: 200px;
+    height: 60px;
+    margin: 15px;
+  }
+
+  .box h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* หน้าจอขนาดใหญ่พิเศษ (เดสก์ท็อปขนาดใหญ่กว่า 1440x900 px) */
+@media (min-width: 1441px) {
 }
 </style>
