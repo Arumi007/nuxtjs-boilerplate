@@ -63,9 +63,9 @@
     </div>
 
     <div class="support-box box">
-      <nuxt-link to="/support">
+      <a href="https://commerce.coinbase.com/checkout/e2355c57-625b-4cc9-b05c-55cba3248f3d" target="_blank">
         <h2>สนับสนุน</h2>
-      </nuxt-link>
+      </a>
     </div>
 
   </div>

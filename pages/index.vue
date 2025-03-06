@@ -7,11 +7,13 @@
           <h2>เกี่ยวกับเรา</h2>
         </nuxt-link>
       </div>
-      <div class="support-box">
-        <nuxt-link to="/support">
-          <h2>สนับสนุน</h2>
-        </nuxt-link>
-      </div>
+
+      <div class="support-box box">
+      <a href="https://commerce.coinbase.com/checkout/e2355c57-625b-4cc9-b05c-55cba3248f3d" target="_blank">
+        <h2>สนับสนุน</h2>
+      </a>
+    </div>
+
     </div>
     <nuxt-link to="/next-page">
       <div class="text-container">
