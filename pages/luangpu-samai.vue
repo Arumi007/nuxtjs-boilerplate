@@ -52,13 +52,13 @@ let isListVisible = ref(false);
 
 
 const dharmaItems = ref([
-  { title: '1. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '2. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '3. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '4. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '5. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '6. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '7. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '1. การพิจารณาร่างกาย (เทศน์เมื่อวันที่ ๘ สิงหาคม ๒๕๔๓)', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '2. อานิสงส์ของการรักษาศีล (เทศน์เมื่อวันที่ ๑๕ กรกฏาคม ๒๕๔๓)', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '3. มรรค ๘ (เทศน์เมื่อวันที่ ๒๓ กรกฎาคม ๒๕๔๓)', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '4. มัชฌิมาปฏิปทา', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '5. สติ', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '6. การปฏิบัติธรรม', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '7. พระธรรมเทศนา  วันออกพรรษา (เมื่อวันที่ ๒๖ ตุลาคม พ.ศ. ๒๕๕๐)', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
     
 ]);
 
