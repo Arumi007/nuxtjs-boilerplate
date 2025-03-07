@@ -5,8 +5,9 @@
       <img src="/fes3.jpg" class="image" />
       <h2 class="birth-title">รวมพระธรรมเทศนา พระอริยะ</h2>
       <p class="birth-detail">
-      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-      bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      ขอต้อนรับทุกท่านเข้าสู่คลังธรรมะ ที่ได้รวบรวมพระธรรมเทศนาอันทรงคุณค่าจากพระอริยสงฆ์ผู้ปฏิบัติดีปฏิบัติชอบหลากหลายรูป เพื่อเป็นแนวทางในการศึกษาและปฏิบัติธรรมะตามคำสอนของพระพุทธเจ้าและครูบาอาจารย์อีกหลายท่าน
+      พระธรรมเทศนาเหล่านี้ เป็นคำสอนที่กลั่นกรองจากประสบการณ์จริงในการปฏิบัติธรรม สามารถนำไปประยุกต์ใช้ในการดำเนินชีวิตประจำวัน เพื่อความสงบสุขและความเจริญทางจิตวิญญาณ
+      ขอเชิญทุกท่านร่วมรับฟังและศึกษาพระธรรมเทศนา เพื่อเป็นแสงสว่างนำทางชีวิต ให้ก้าวสู่ความสุขที่แท้จริง
       </p>
 
       <div class="dharma-list">
@@ -116,10 +117,11 @@ const goToDrive = (driveUrl) => {
 
 <style scoped>
 .container {
-  background-image: url('/lotus3.jpg');
-  background-size: cover;
+  background-image: url('/lotus2.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุมกล่อง */
+  background-position: center; /* ปรับตำแหน่งภาพพื้นหลัง */
   background-repeat: no-repeat;
-  min-height: 400vh;
+  min-height: 150vh; /* ปรับความสูงให้เต็ม viewport */
   position: relative;
 }
 
@@ -136,11 +138,12 @@ const goToDrive = (driveUrl) => {
 
 .empty-box {
   position: absolute;
-  top: 53%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 400vh;
+  height: 130vh; /* ปรับความสูงสูงสุด */
+  overflow-y: auto; /* เพิ่ม scrollbar ถ้าเนื้อหาเกิน */
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ccc;
   text-align: center;

@@ -3,11 +3,49 @@
     <h1 class="welcome-text">หลวงปู่บุญฤทธิ์ ปัณฑิโต</h1>
     <div class="empty-box">
       <img src="/pu_boonrit.jpg" class="image" />
-      <h2 class="birth-title">ชาติกำเนิด</h2>
+      <h2 class="birth-title">ชีวประวัติโดยย่อ</h2>
+      
       <p class="birth-detail">
-        หลวงปู่บุญฤทธิ์ ปัณฑิโต เป็นพระภิกษุสงฆ์สายวิปัสสนากรรมฐาน ศิษย์สำคัญของหลวงปู่ชอบ ฐานสโม 
-        ท่านเป็นที่เคารพศรัทธาของพุทธศาสนิกชนจำนวนมาก ด้วยปฏิปทาที่เคร่งครัด และการเผยแผ่ธรรมะทั้งในและต่างประเทศ
+        หลวงปู่บุญฤทธิ์ ปัณฑิโต เป็นพระภิกษุฝ่ายอรัญวาสี ศิษย์ของหลวงปู่ชอบ ฐานสโม 
+        ท่านเป็นที่เคารพศรัทธาของพุทธศาสนิกชนทั่วไป ทั้งชาวไทยและชาวต่างชาติ
+        <br><strong>ชาติกำเนิด</strong>
       </p>
+
+      <p class="birth-detail">
+                หลวงปู่บุญฤทธิ์ ปัณฑิโต มีนามเดิมว่า บุญฤทธิ์ จันทรสมบูรณ์ 
+          เกิดในช่วงสงครามโลกครั้งที่ 1 เดือนกุมภาพันธ์ พ.ศ. 2458 ที่บ้านท่าอิฐ ตำบลท่าอิฐ อำเภอพิชัยดาบหัก จังหวัดอุตรดิตถ์ 
+          เป็นบุตรชายของหลวงพินิจจินเภท และคุณแส จันทรสมบูรณ์ 
+          <br><strong>การศึกษาและการทำงาน</strong>
+      </p>
+
+      <p class="birth-detail">
+                ในอดีตท่านเป็นนักศึกษาจบปริญญาจากต่างประเทศ 
+          เป็นข้าราชการหนุ่มที่มีอนาคตสดใส 
+          <br><strong>การอุปสมบท</strong>
+      </p>
+
+      <p class="birth-detail">
+      ด้วยความเลื่อมใสปฏิปทาพระป่าสายหลวงปู่มั่น ภูริทัตโต ท่านจึงลาออกจากราชการแล้วออกบวชและปฏิบัติธรรมแบบถวายชีวิตต่อพระศาสนา 
+      <br><strong>ปฏิปทาและคุณธรรม</strong>
+      </p>
+
+      <p class="birth-detail">
+          ออกธุดงค์อยู่ตามป่าตามเขาโดยตลอด 
+          เป็นศิษย์สำคัญองค์หนึ่งของหลวงปู่ชอบ ฐานสโม 
+          มีความสามารถพูดได้หลายภาษา 
+          เป็นพระธรรมทูต เดินทางไปเผยแผ่พระพุทธศาสนาในต่างประเทศกว่า 30 ปี เช่น เม็กซิโก สวีเดน สวิตเซอร์แลนด์ จีน เยอรมัน สหรัฐอเมริกา ออสเตรเลีย
+          <br><strong>สถานที่สำคัญ</strong>   
+      </p>
+
+      <p class="birth-detail">
+      สำนักปฏิบัติธรรมสวนทิพย์ อำเภอปากเกร็ด จังหวัดนนทบุรี 
+      <br><strong>มรณภาพ</strong>
+      </p>
+
+      <p class="birth-detail">
+      หลวงปู่บุญฤทธิ์ ปัณฑิโต ได้ละสังขารอย่างสงบเมื่อวันที่ 14 พฤศจิกายน พ.ศ. 2561 เวลา 22.22 น. สิริอายุ 104 ปี 73 พรรษา ณ โรงพยาบาลจุฬาลงกรณ์ สภากาชาดไทย
+      </p>
+
       <div class="dharma-list">
         <span class="dharma-title" @click="toggleList">1. ธรรมเทศนา ของหลวงปู่บุญฤทธิ์ ปัณฑิโต</span>
         <ul ref="dharmaList" class="dharma-sublist">
@@ -66,10 +104,11 @@ const goToDrive = (driveUrl) => {
 
 <style scoped>
 .container {
-  background-image: url('/lotus3.jpg');
-  background-size: cover;
+  background-image: url('/lotus2.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุมกล่อง */
+  background-position: center; /* ปรับตำแหน่งภาพพื้นหลัง */
   background-repeat: no-repeat;
-  min-height: 400vh;
+  min-height: 150vh; /* ปรับความสูงให้เต็ม viewport */
   position: relative;
 }
 
@@ -86,19 +125,20 @@ const goToDrive = (driveUrl) => {
 
 .empty-box {
   position: absolute;
-  top: 53%;
+  top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 400vh;
+  height: 130vh; /* ปรับความสูงสูงสุด */
+  overflow-y: auto; /* เพิ่ม scrollbar ถ้าเนื้อหาเกิน */
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ccc;
   text-align: center;
 }
 
 .image {
-  width: 25%;
-  height: 10%;
+  width: 30%;
+  height: 30%;
   display: block;
   margin: 0 auto;
 }

@@ -1,14 +1,26 @@
 <template>
   <div class="container">
+  <h1 class="welcome-text">พระธรรมโกศาจารย์ (เงื่อม อินฺทปญฺโญ)</h1>
     <div class="empty-box">
       <img src="/pu_puttas.jpg" class="image" />
       <h2 class="birth-title">ประวัติ</h2>
+
       <p class="birth-detail">
-        พระธรรมโกศาจารย์ หรือรู้จักในนาม พุทธทาสภิกขุ (เกิด เงื่อม พานิช; 27 พฤษภาคม พ.ศ. 2449 — 8 กรกฎาคม พ.ศ. 2536)
-        เป็นชาวอำเภอไชยา จังหวัดสุราษฎร์ธานี ผลงานเด่นของท่านพุทธทาสคืองานหนังสือ เช่น ตามรอยพระอรหันต์ คู่มือมนุษย์
-        และเป็นภิกษุไทยรูปแรกที่บุกเบิกการใช้โสตทัศนูปกรณ์สมัยใหม่สำหรับการเผยแพร่ธรรมะ และท่านมีสหายธรรมคนสำคัญ
-        คือ ปัญญานันทภิกขุ วัดชลประทานรังสฤษฎ์ และท่าน บ.ช. เขมาภิรัต
+        พระธรรมโกศาจารย์ หรือรู้จักในนาม พุทธทาสภิกขุ (เกิด เงื่อม พานิช; 27 พฤษภาคม พ.ศ. 2449 — 8 กรกฎาคม พ.ศ. 2536) 
+        เป็นชาวอำเภอไชยา จังหวัดสุราษฎร์ธานี ผลงานเด่นของท่านพุทธทาสคืองานหนังสือ เช่น ตามรอยพระอรหันต์ คู่มือมนุษย์ 
+        และเป็นภิกษุไทยรูปแรกที่บุกเบิกการใช้โสตทัศนูปกรณ์สมัยใหม่สำหรับการเผยแพร่ธรรมะ และท่านมีสหายธรรมคนสำคัญ 
+        คือ ปัญญานันทภิกขุ วัดชลประทานรังสฤษฎ์ และท่าน บ.ช. เขมาภิรัต
+        <br><strong>บรรพชิต</strong>
       </p>
+
+      <p class="birth-detail">
+      ท่านพุทธทาสภิกขุได้บวชเรียนตามประเพณี เมื่อวันที่ 29 กรกฎาคม พ.ศ. 2469 ที่โรงอุโบสถวัดอุบล หรือวัดนอก 
+      ก่อนจะย้ายมาประจำอยู่ที่วัดพุมเรียง มีพระอุปัชฌาย์คือ พระครูโสภณเจตสิการาม (คง วิมาโล) รองเจ้าคณะเมืองในสมัยนั้น 
+      และมีพระปลัดทุ่ม อินทโชโต เจ้าอาวาสวัดอุบล และ พระครูศักดิ์ ธมฺรกฺขิตฺโต เจ้าอาวาสวัดวินัย (อำเภอไชยา) หรือวัดหัวคู 
+      เป็นพระคู่สวด ท่านพุทธทาสภิกขุได้รับฉายาว่า อินทปญฺโญ ซึ่งแปลว่าผู้มีปัญญาอันยิ่งใหญ่
+      <a href="https://th.wikipedia.org/wiki/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%82%E0%B8%81%E0%B8%A8%E0%B8%B2%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B9%8C_(%E0%B9%80%E0%B8%87%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1_%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B8%BA%E0%B8%97%E0%B8%9B%E0%B8%8D%E0%B8%BA%E0%B9%82%E0%B8%8D)" target="_blank"><strong>อ่านข้อมูลเพิ่มเติม</strong></a>
+      </p>
+
 
       <div v-for="(dharma, dharmaIndex) in dharmas" :key="dharma.id" class="dharma-list">
         <span class="dharma-title" @click="toggleSubList(dharmaIndex)" :data-index="dharmaIndex">
@@ -4887,10 +4899,11 @@ const goToDrive = (driveUrl) => {
 
 <style scoped>
 .container {
-  background-image: url('/lotus3.jpg');
-  background-size: cover;
+  background-image: url('/lotus2.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุมกล่อง */
+  background-position: center; /* ปรับตำแหน่งภาพพื้นหลัง */
   background-repeat: no-repeat;
-  min-height: 400vh;
+  min-height: 150vh; /* ปรับความสูงให้เต็ม viewport */
   position: relative;
 }
 
@@ -4900,18 +4913,20 @@ const goToDrive = (driveUrl) => {
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Prompt', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   color: yellow;
+  width: 150%;
 }
 
 .empty-box {
   position: absolute;
-  top: 53%;
+  top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 400vh;
+  height: 130vh; /* ปรับความสูงสูงสุด */
+  overflow-y: auto; /* เพิ่ม scrollbar ถ้าเนื้อหาเกิน */
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ccc;
   text-align: center;

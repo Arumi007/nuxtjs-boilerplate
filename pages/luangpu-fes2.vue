@@ -11,7 +11,7 @@
         ได้มาประชุมพร้อมกันยังวัดเวฬุวันโดยมิได้นัดหมาย, พระภิกษุทั้งหมดนั้นเป็น "เอหิภิกขุอุปสัมปทา" 
         หรือผู้ได้รับการอุปสมบทจากพระพุทธเจ้าโดยตรง, พระภิกษุทั้งหมดนั้นล้วนเป็นพระอรหันต์ผู้ทรงอภิญญา 6 
         และวันดังกล่าวตรงกับวันเพ็ญเดือน 3 ดังนั้น จึงเรียกวันนี้อีกอย่างหนึ่งว่า "วันจาตุรงคสันนิบาต" หรือ วันที่มีการประชุมพร้อมด้วยองค์ 4
-
+        <a href="https://th.wikipedia.org/wiki/%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%86%E0%B8%9A%E0%B8%B9%E0%B8%8A%E0%B8%B2" target="_blank"><strong>อ่านข้อมูลเพิ่มเติม</strong></a>
       </p>
 
       <div class="dharma-list">
@@ -90,10 +90,11 @@ const goToDrive = (driveUrl) => {
 
 <style scoped>
 .container {
-  background-image: url('/lotus3.jpg');
-  background-size: cover;
+  background-image: url('/lotus2.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุมกล่อง */
+  background-position: center; /* ปรับตำแหน่งภาพพื้นหลัง */
   background-repeat: no-repeat;
-  min-height: 400vh;
+  min-height: 150vh; /* ปรับความสูงให้เต็ม viewport */
   position: relative;
 }
 
@@ -103,18 +104,20 @@ const goToDrive = (driveUrl) => {
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Prompt', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   color: yellow;
+  width: 200%;
 }
 
 .empty-box {
   position: absolute;
-  top: 53%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 400vh;
+  height: 130vh; /* ปรับความสูงสูงสุด */
+  overflow-y: auto; /* เพิ่ม scrollbar ถ้าเนื้อหาเกิน */
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ccc;
   text-align: center;

@@ -1,15 +1,26 @@
 <template>
   <div class="container">
-    <h1 class="welcome-text">หลวงปู่ท่อน ญาณธโร</h1>
+    <h1 class="welcome-text"><strong>พระโพธิธรรมาจารย์เถร วิ.(สุวัจน์ สุวโจ)</strong></h1>
     <div class="empty-box">
       <img src="/Por_ton.jpg" class="image" />
-      <h2 class="birth-title">ชาติกำเนิด</h2>
+      <h2 class="birth-title">ชีวประวัติโดยย่อ</h2>
       <p class="birth-detail">
-        หลวงปู่ท่อน ญาณธโร ชื่อเดิมว่า ท่อน ประเสริฐพงศ์ เกิดเมื่อวันที่ 3 พฤษภาคม พ.ศ.
-        2471 ณ บ้านหินขาว ตำบลสาวะถี อำเภอเมืองขอนแก่น จังหวัดขอนแก่น
-        ตรงกับวันพฤหัสบดี ขึ้น 15 ค่ำ เดือน 6 ปีมะโรง บิดา-มารดาชื่อ นายแจ่ม
-        และนางทา ประเสริฐพงศ์ มีพี่น้องร่วมกันทั้งหมด 19 คน ท่านบุตรคนที่ 6
+        พระโพธิธรรมาจารย์เถร วิ. มีนามเดิมว่า สุวัจน์ ทองศรี เกิดเมื่อวันที่ ๒๙ สิงหาคม พ.ศ. ๒๔๖๒ 
+        ตรงกับวันศุกร์ ขึ้น ๔ ค่ำ เดือน ๑๐ ปีมะแม เป็นชาวตำบลตากูก อำเภอเมืองสุรินทร์ จังหวัดสุรินทร์ โยมบิดาชื่อ พ่อบุตร ทองศรี โยมมารดาชื่อ เเม่กึ่ง ทองศรี
       </p>
+
+      <p class="birth-detail">
+	    <strong>บรรพชา</strong>: เมื่อปี พ.ศ. ๒๔๘๑ ขณะมีอายุได้ ๑๙ ปี ได้บรรพชา ณ วัดกระพุมรัตน์ บ้านตากูก อำเภอเมืองสุรินทร์ 
+      </p>
+
+      <p class="birth-detail">
+	    <strong>อุปสมบท</strong>: เมื่อปี พ.ศ. ๒๔๘๒ อายุครบ ๒๐ ปี ณ วัดกระพุมรัตน์ บ้านตากูก ซึ่งเป็นวัดฝ่ายมหานิกาย 
+      โดยมี พระครูธรรมทัศน์พิมล (ด้น) เจ้าอาวาสวัดศาลาลอย (เมื่อครั้งเป็นเจ้าคณะอำเภอสุรินทร์) เป็นพระอุปัชฌาย์ 
+      มีพระอาจารย์เคลือบ วัดดาวรุ่ง บ้านขาม เป็นพระกรรมวาจาจารย์ เเละพระอาจารย์อุเทน วัดกระพุมรัตน์ บ้านตากูก เป็นพระอนุสาวนาจารย์ ได้รับฉายาว่า "สุวโจ" 
+      <a href="https://sangkhatikan.com/monk_view.php?ID=15397" target="_blank"><strong>อ่านข้อมูลเพิ่มเติม</strong></a>
+      </p>
+
+
       <div class="dharma-list">
         <div class="dharma-list-item">
           <span class="dharma-title dharma-title" @click="toggleList">1. ธรรมเทศนา</span>
@@ -24,6 +35,7 @@
             </li>
           </ul>
         </div>
+
         <div class="dharma-list-item">
           <span class="dharma-title" @click="toggleLastDharmaList">2. ธรรมเทศนา ๘๐ กัณฑ์สุดท้าย</span>
           <ul ref="lastDharmaList" class="dharma-sublist">
@@ -37,6 +49,7 @@
             </li>
           </ul>
         </div>
+
       </div>
       <div class="drive-download">
         <span class="dharma-title" @click="goToDrive('https://drive.google.com/drive/folders/1rghqlC0J3sJpyjojp6403y8PajnSZVOw?usp=drive_link')">ดาวน์โหลดรวมพระธรรมเทศนา </span>
@@ -177,10 +190,11 @@ const toggleLastDharmaList = () => {
 
 <style scoped>
 .container {
-  background-image: url('/lotus3.jpg');
-  background-size: cover;
+  background-image: url('/lotus2.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุมกล่อง */
+  background-position: center; /* ปรับตำแหน่งภาพพื้นหลัง */
   background-repeat: no-repeat;
-  min-height: 400vh;
+  min-height: 150vh; /* ปรับความสูงให้เต็ม viewport */
   position: relative;
 }
 
@@ -190,18 +204,19 @@ const toggleLastDharmaList = () => {
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Prompt', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   color: yellow;
 }
 
 .empty-box {
   position: absolute;
-  top: 53%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 400vh;
+  height: 130vh; /* ปรับความสูงสูงสุด */
+  overflow-y: auto; /* เพิ่ม scrollbar ถ้าเนื้อหาเกิน */
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ccc;
   text-align: center;

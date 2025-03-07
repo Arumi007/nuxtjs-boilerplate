@@ -3,7 +3,7 @@
     <h1 class="welcome-text">หลวงปู่หนูเมย สิริธโร</h1>
     <div class="empty-box">
       <img src="/pu_mei.jpg" class="image" />
-      <h2 class="birth-title">ประวัติและปฏิปทา หลวงปู่หนูเมย  สิริธโร</h2>
+      <h2 class="birth-title">ชีวประวัติโดยย่อ</h2>
       <p class="birth-detail">
         วันนี้วันที่ ๕ กรกฎาคม​ ๒๕๖​๗ เป็นวันคล้ายวันเกิดหลวงปู่หนูเมย สิริธโร 
         วัดป่าอุดมสังฆกิจ(วัดป่าท่าศรีไคล) ตำบลธาตุ อำเภอวานรนิวาส จังหวัดสกลนคร เจริญอายุวัฒนมงคลครบ ๘๔ ปี หลวงปู่หนูเมย สิริธโร 
@@ -11,6 +11,10 @@
         เป็นผู้ทรงไว้ซึ่งสิริคือ ความงดงามความดี ธรรมะที่ท่านเทศนาสั่งสอนลูกศิษย์ในหลายๆ โอกาส หากเพียงแต่ได้น้อมนําเข้ามาสู่ ตัวเองมาพิจารณา 
         จะพบว่า ไม่ได้ห่างไกลไปจากชีวิตประจําวันเลย หลวงปู่พร่ำสอนเสมอว่า “กินง่าย อยู่ง่าย แต่อย่าเป็นคนมักง่าย” , “นิ่มนวล แน่นอน และหนักแน่น” 
         , ให้มี “นโม” อยู่ในหัวใจ นโมคือความนอบน้อม นอบน้อมต่อพระพุทธ นอบน้อมต่อพระธรรมวินัย นอบน้อมต่อพระสงฆ์ผู้ปฏิบัติดี ปฏิบัติชอบ และนอบน้อมต่อพ่อแม่บุพการีและผู้มีพระคุณ
+      </p>
+      
+      <p class="birth-detail">
+      <strong>อุปสมบท</strong> เมื่อวันที่ ๕ พฤษภาคม ๒๕๐๖ ที่วัดป่าสุนทราราม (วัดบ้านกุดแห่) อำเภอเลิงนกทา จังหวัดอุบลราชธานี (ปัจจุบัน คือ จังหวัดยโสธร) โดยมีพระอุปัชฌาย์ คือ พระครูภัทรคุณาธาร (บุญ โกสโส) ป.ธ.๔ วัดพรหมวิหาร และพระอาจารย์สิงห์ทอง ปภากโร เป็นพระกรรมวาจาจารย์
       </p>
       <div class="dharma-list">
         <span class="dharma-title" @click="toggleList">1. ธรรมเทศนา หลวงปู่หนูเมย สิริธโร</span>
@@ -78,10 +82,11 @@ const goToDrive = (driveUrl) => {
 
 <style scoped>
 .container {
-  background-image: url('/lotus3.jpg');
-  background-size: cover;
+  background-image: url('/lotus2.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุมกล่อง */
+  background-position: center; /* ปรับตำแหน่งภาพพื้นหลัง */
   background-repeat: no-repeat;
-  min-height: 400vh;
+  min-height: 150vh; /* ปรับความสูงให้เต็ม viewport */
   position: relative;
 }
 
@@ -94,15 +99,17 @@ const goToDrive = (driveUrl) => {
   font-size: 3rem;
   text-align: center;
   color: yellow;
+  width: 150%;
 }
 
 .empty-box {
   position: absolute;
-  top: 53%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 400vh;
+  height: 130vh; /* ปรับความสูงสูงสุด */
+  overflow-y: auto; /* เพิ่ม scrollbar ถ้าเนื้อหาเกิน */
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ccc;
   text-align: center;
@@ -110,7 +117,7 @@ const goToDrive = (driveUrl) => {
 
 .image {
   width: 25%;
-  height: 10%;
+  height: 25%;
   display: block;
   margin: 0 auto;
 }

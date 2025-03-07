@@ -3,11 +3,23 @@
     <h1 class="welcome-text">พระญาณสิทธาจารย์ (สิม พุทฺธาจาโร)</h1>
     <div class="empty-box">
       <img src="/pu_sim.jpg" class="image" />
-      <h2 class="birth-title">ชาติกำเนิด</h2>
+      <h2 class="birth-title">ชีวประวัติโดยย่อ</h2>
       <p class="birth-detail">
-        พระญาณสิทธาจารย์ หรือ หลวงปู่สิม พุทฺธาจาโร ท่านเกิดเมื่อวันที่ 26 พฤศจิกายน พ.ศ. 2452 ตรงกับวันศุกร์ ขึ้น 14 ค่ำ เดือน 12 ปีระกา เวลา 20.00 น. 
-        ตรงกับปลายรัชสมัยพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว ที่บ้านบัว ตำบลสว่าง อำเภอพรรณานิคม จังหวัดสกลนคร บิดามารดาชื่อ นายสาน - นางสิงห์คำ วงศ์เข็มมา มีพี่น้องร่วมบิดามารดา 10 คน ท่านเป็นคนที่ 5
+        พระญาณสิทธาจารย์ นามเดิมสิม วงศ์เข็มมา ฉายา พุทฺธาจาโร เป็นพระราชาคณะชั้นสามัญยก ฝ่ายวิปัสสนาธุระสายพระป่าในประเทศไทย 
+        คณะธรรมยุติกนิกาย อดีตเจ้าอาวาสสำนักสงฆ์ถ้ำผาปล่อง อำเภอเชียงดาว จังหวัดเชียงใหม่ ศิษย์ของพระครูวินัยธร (มั่น ภูริทตฺโต)
+        <br><strong>ชาติกำเนิด</strong><br>
       </p>
+
+      <p class="birth-detail">
+      พระญาณสิทธาจารย์ หรือ หลวงปู่สิม พุทฺธาจาโร ท่านเกิดเมื่อวันที่ 26 พฤศจิกายน พ.ศ. 2452 ตรงกับวันศุกร์ ขึ้น 14 ค่ำ เดือน 12 ปีระกา เวลา 20.00 น. ตรงกับปลายรัชสมัยพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว ที่บ้านบัว ตำบลสว่าง อำเภอพรรณานิคม จังหวัดสกลนคร บิดามารดาชื่อ นายสาน - นางสิงห์คำ วงศ์เข็มมา มีพี่น้องร่วมบิดามารดา 10 คน ท่านเป็นคนที่ 5
+      <br><strong>อุปสมบท</strong><br>
+      </p>
+
+      <p class="birth-detail">
+      เมื่อท่านอายุ 17 ปี ได้ขอบิดามารดาบรรพชาเป็นสามเณร ณ วัดศรีรัตนาราม ซึ่งเป็นวัดมหานิกาย ณ บ้านบัว นั้นเอง เมื่อวันที่ 8 กรกฎาคม พ.ศ. 2469 ตรงกับวันอาทิตย์ แรม 7 ค่ำ เดือน 8 ปีมะโรง โดยมีพระอาจารย์สีทอง เป็นพระอุปัชฌาย์
+      <a href="https://th.wikipedia.org/wiki/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%8D%E0%B8%B2%E0%B8%93%E0%B8%AA%E0%B8%B4%E0%B8%97%E0%B8%98%E0%B8%B2%E0%B8%88%E0%B8%B2%E0%B8%A3%E0%B8%A2%E0%B9%8C_(%E0%B8%AA%E0%B8%B4%E0%B8%A1_%E0%B8%9E%E0%B8%B8%E0%B8%97%E0%B8%BA%E0%B8%98%E0%B8%B2%E0%B8%88%E0%B8%B2%E0%B9%82%E0%B8%A3)" target="_blank"><strong>อ่านข้อมูลเพิ่มเติม</strong></a>
+      </p>
+
       <div class="dharma-list">
         <span class="dharma-title" @click="toggleList">1. ธรรมะรวมลงที่ใจ</span>
         <ul ref="dharmaList" class="dharma-sublist">
@@ -1036,10 +1048,11 @@ const goToDrive = (driveUrl) => {
 
 <style scoped>
 .container {
-  background-image: url('/lotus3.jpg');
-  background-size: cover;
+  background-image: url('/lotus2.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุมกล่อง */
+  background-position: center; /* ปรับตำแหน่งภาพพื้นหลัง */
   background-repeat: no-repeat;
-  min-height: 400vh;
+  min-height: 150vh; /* ปรับความสูงให้เต็ม viewport */
   position: relative;
 }
 
@@ -1049,18 +1062,19 @@ const goToDrive = (driveUrl) => {
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Prompt', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   color: yellow;
 }
 
 .empty-box {
   position: absolute;
-  top: 53%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 400vh;
+  height: 130vh; /* ปรับความสูงสูงสุด */
+  overflow-y: auto; /* เพิ่ม scrollbar ถ้าเนื้อหาเกิน */
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ccc;
   text-align: center;

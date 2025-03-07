@@ -5,9 +5,38 @@
       <img src="/pu_jan.jpg" class="image" />
       <h2 class="birth-title">ประวัติหลวงปู่จันทา ถาวโร</h2>
       <p class="birth-detail">
-        หลวงปู่จันทา ถาวโร เป็นพระสงฆ์สายวิปัสสนากรรมฐาน ศิษย์สายหลวงปู่มั่น ภูริทัตโต ท่านเป็นพระที่มีเมตตาธรรมสูง 
-        มีปฏิปทาที่เคร่งครัด และเป็นที่เคารพศรัทธาของพุทธศาสนิกชนจำนวนมาก
+        หลวงปู่จันทา ถาวโร เป็นพระภิกษุฝ่ายอรัญวาสี ศิษย์ของพระอาจารย์มั่น ภูริทัตโต ท่านเป็นที่เคารพศรัทธาของพุทธศาสนิกชนทั่วไป และมีลูกศิษย์ลูกหาจำนวนมาก
+      <br><strong>ชาติกำเนิด</strong>
+      </p>
 
+      <p class="birth-detail">
+      หลวงปู่จันทา ถาวโร เกิดเมื่อวันเสาร์ที่ 10 กุมภาพันธ์ พ.ศ. 2465 
+      มีชื่อจริงว่า นายจันทา ชัยนิด เป็นชาวร้อยเอ็ด 
+      <br><strong>การอุปสมบท</strong>
+      </p>
+
+      <p class="birth-detail">
+                หลวงปู่จันทาญัตติจากมหานิกายเป็นธรรมยุตเมื่อปี พ.ศ. 2493 
+          เริ่มฝึกจิตกับหลวงปู่ทับ เขมโกในพรรษาแรก 
+          <br><strong>ปฏิปทาและคุณธรรม</strong>
+      </p>
+
+      <p class="birth-detail">
+          หลวงปู่จันทาได้ฝากตัวเข้ารับการฝึกอบรมจากพ่อแม่ครูอาจารย์หลายรูป อาทิ หลวงปู่บัว หลวงปู่ฝั้น อาจาโร หลวงปู่ขาว อนาลโย หลวงปู่หลุย จันทสาโร หลวงตามหาบัว ญาณสัมปันโน รูปที่ท่านอยู่อุปฐากนานที่สุดคือ หลวงปู่ขาว 
+          เมื่อมาสู่สำนักถ้ำกลองเพลนั้น หลวงปู่ขาวให้อดนอน ผ่อนอาหาร เร่งความเพียร 
+          ท่านเน้นการปลุกเสกตน เป็นสิ่งสำคัญมากสำหรับชาวพุทธ 
+          เป็นพระที่บริสุทธิ์ ประพฤติดี ปฎิบัติชอบ ในสายพระอาจารย์มั่น
+          <br><strong>สถานที่สำคัญ</strong>
+      </p>
+
+      <p class="birth-detail">
+          วัดป่าเขาน้อย ตำบลวังทรายพูน อำเภอวังทรายพูน จังหวัดพิจิตร 
+      <br><strong>มรณภาพ</strong>
+      </p>
+
+      <p class="birth-detail">
+          หลวงปู่จันทา ถาวโร มรณภาพด้วยอาการสงบ เมื่อเวลา 06.00 น วันที่ 21 กุมภาพันธ์ พ.ศ. 2555 ด้วยโรคชรา
+          <a href="https://www.web-pra.com/amulet/%E0%B8%AB%E0%B8%A5%E0%B8%A7%E0%B8%87%E0%B8%9B%E0%B8%B9%E0%B9%88%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B2-%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9B%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%82%E0%B8%B2%E0%B8%99%E0%B9%89%E0%B8%AD%E0%B8%A2/history" target="_blank"><strong>อ่านข้อมูลเพิ่มเติม</strong></a>
       </p>
       
       <div class="dharma-list">
@@ -350,10 +379,11 @@ const goToDrive = (driveUrl) => {
 
 <style scoped>
 .container {
-  background-image: url('/lotus3.jpg');
-  background-size: cover;
+  background-image: url('/lotus2.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้ครอบคลุมกล่อง */
+  background-position: center; /* ปรับตำแหน่งภาพพื้นหลัง */
   background-repeat: no-repeat;
-  min-height: 400vh;
+  min-height: 150vh; /* ปรับความสูงให้เต็ม viewport */
   position: relative;
 }
 
@@ -370,19 +400,20 @@ const goToDrive = (driveUrl) => {
 
 .empty-box {
   position: absolute;
-  top: 53%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 400vh;
+  height: 130vh; /* ปรับความสูงสูงสุด */
+  overflow-y: auto; /* เพิ่ม scrollbar ถ้าเนื้อหาเกิน */
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #ccc;
   text-align: center;
 }
 
 .image {
-  max-width: 150%;
-  max-height: 150%;
+  width: 30%;
+  height: 30%;
   display: block;
   margin: 0 auto;
 }
