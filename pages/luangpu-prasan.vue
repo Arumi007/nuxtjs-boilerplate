@@ -52,15 +52,15 @@ let isListVisible = ref(false);
 
 
 const dharmaItems = ref([
-  { title: '1. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '2. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '3. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '4. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '5. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '6. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '7. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '8. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
-  { title: '9. bb', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '1. เทศนาวัดคำตานา', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '2. ตนเตือนตน', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '3. เทศนาวัดหลวงปู่เนย', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '4. พุทธประวัติ', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '5. ปฐมสมโภชน์', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '6. บุญข้าสารท', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '7. พระศรีอริยเมตไตรย์', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '8. อบรมคณะครูอาจารย์', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
+  { title: '9. การจำพรรษาพระเจ้าพระสงฆ์', soundcloudUrl: 'YOUR_AUDIO_LINK_1' },
   
 ]);
 
